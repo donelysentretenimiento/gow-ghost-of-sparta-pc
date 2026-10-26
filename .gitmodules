@@ -1,4 +1,4 @@
 [submodule "portablekit"]
 	path = portablekit
-	url = https://github.com/arnaldolima1/PortableKit.git
-	branch = sparta
+	url = https://github.com/donelysentretenimiento/PortableKit.git
+	branch = feature/spanish-es
