@@ -39,7 +39,7 @@ constexpr LauncherTheme kLauncher{
     .backdrop_focus_y = 0.03f,
     .logo_on_black = true,
     .project_url = "https://github.com/arnaldolima1/gow-ghost-of-sparta-pc",
-    .issues_url = "https://github.com/arnaldolima1/gow-ghost-of-sparta-pc/issues",
+    .issues_url = "https://github.com/donelysentretenimiento/gow-ghost-of-sparta-pc/issues",
     .credits = "An unofficial port, played from your own copy of the game.",
 };
 
