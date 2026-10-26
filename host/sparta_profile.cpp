@@ -46,6 +46,12 @@ constexpr LauncherTheme kLauncher{
 // The North American release has the same textures: a pack made for it on
 // PPSSPP keys the European release's textures alike (checked against one).
 // The game itself still names it, in the paths of its downloadable content.
+// The languages UCES-01401 carries: a DATA/<LANGUAGE> and a DIALOGS/<LANGUAGE>
+// folder each (checked in the disc image).
+constexpr GameProfile::GameLanguage kGameLanguages[] = {
+    {1u, "English"}, {2u, "Français"}, {3u, "Español"}, {4u, "Deutsch"}, {5u, "Italiano"},
+};
+
 constexpr const char *kTexturePackReleases[] = {"UCUS98737"};
 
 } // namespace
@@ -99,9 +105,13 @@ const GameProfile &game() {
         // START skips the game's pre-rendered movies.
         .start_skips_movies = true,
 
-        // A European console: English, confirm on cross.
-        .system_language = 1u,
+        // A European console, in Spanish (Sparta ES): confirm on cross. The
+        // player may pick another of the disc's languages; the voices are
+        // English on the disc whatever the language (DIALOGS/*/*EN.AT3 are the
+        // same files in every folder).
+        .system_language = 3u,
         .confirm_button = 1u,
+        .game_languages = kGameLanguages,
 
         .texture_pack_releases = kTexturePackReleases,
         // The game is mixed loud; a new player starts at 30%.
